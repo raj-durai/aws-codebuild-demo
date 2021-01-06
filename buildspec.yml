@@ -1,0 +1,17 @@
+version: 0.2
+
+env:
+  variables:
+      CI: "true"
+      
+phases:
+  install:
+    commands:
+      - yarn install
+  pre_build:
+    commands:
+      - yarn test
+      
+  build:
+    commands:
+      - yarn run build
